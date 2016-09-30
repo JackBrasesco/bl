@@ -15,7 +15,8 @@ function addMessage() {
 
 function readMessages(callback) {
   console.log("binding");
-  store.child("messages").on("child_added", function(child) {		
+  store.child("messages").on("child_added", function(child) {
+    var video = $("#blah");
     var data = child.val()
     var message = data.message		
     callback(message);
