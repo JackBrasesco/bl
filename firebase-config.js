@@ -6,7 +6,8 @@ var firebaseConfig = {
 
 var input = $("#blah")
 
-input.keydown
+input.keydown(function(keydownevent) {
+  
 firebase.initializeApp(firebaseConfig);
 
 var store = firebase.database().ref("challenge")
