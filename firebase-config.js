@@ -7,14 +7,15 @@ var firebaseConfig = {
 var input = $("#blah")
 
 input.keydown(function(keydownevent) {
-  if (keydownevent.keycode == 13)
+  if (keydownevent.keycode == 13);
+  input.val()
 firebase.initializeApp(firebaseConfig);
 
 var store = firebase.database().ref("challenge")
 
 function addMessage() {
   console.log("Adding message");
-  store.child("messages").push({message: '<iframe width="560" height="315" src="https://www.youtube.com/embed/vfc42Pb5RA8?&autoplay = 1" frameborder="0" allowfullscreen></iframe>'})	
+  store.child("messages").push({message:input})	
 }
 
 function readMessages(callback) {
