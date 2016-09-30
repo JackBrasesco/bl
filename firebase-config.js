@@ -4,6 +4,9 @@ var firebaseConfig = {
   databaseURL: "https://classadoo-dev.firebaseio.com"	
 };
 
+var input = $("#blah")
+
+input.keydown
 firebase.initializeApp(firebaseConfig);
 
 var store = firebase.database().ref("challenge")
