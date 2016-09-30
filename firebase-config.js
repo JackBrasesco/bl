@@ -4,18 +4,14 @@ var firebaseConfig = {
   databaseURL: "https://classadoo-dev.firebaseio.com"	
 };
 
-var input = $("#blah")
 
-input.keydown(function(keydownevent) {
-  if (keydownevent.keycode == 13);
-  input.val()
 firebase.initializeApp(firebaseConfig);
 
 var store = firebase.database().ref("challenge")
 
 function addMessage() {
   console.log("Adding message");
-  store.child("messages").push({message:input})	
+  store.child("messages").push({message: "hi "})	
 }
 
 function readMessages(callback) {
