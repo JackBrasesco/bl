@@ -6,3 +6,4 @@ readMessages(function(message) {
 listenForClear(function() {  
   $(".message-display").html("")
 })
+console.log("hi")
