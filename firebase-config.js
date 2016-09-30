@@ -7,7 +7,7 @@ var firebaseConfig = {
 var input = $("#blah")
 
 input.keydown(function(keydownevent) {
-  
+  if (keydownevent.keycode == 13)
 firebase.initializeApp(firebaseConfig);
 
 var store = firebase.database().ref("challenge")
