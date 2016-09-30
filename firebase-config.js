@@ -10,7 +10,7 @@ var store = firebase.database().ref("challenge")
 
 function addMessage() {
   console.log("Adding message");
-  store.child("messages").push({})	
+  store.child("messages").push({message: "sah dudes"})	
 }
 
 function readMessages(callback) {
@@ -18,7 +18,7 @@ function readMessages(callback) {
   store.child("messages").on("child_added", function(child) {
     var video = $("#blah");
     var data = child.val()
-    var message = data.message		
+    var message = data.message.style.color = "red"		
     callback(message);
   })
 }
